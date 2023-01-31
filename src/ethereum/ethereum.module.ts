@@ -1,3 +1,4 @@
+import { EthereumIndexer } from './scheduler/manageBlocks.service';
 import { Module } from '@nestjs/common';
 import { ConfigService } from 'src/config/config.service';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -11,6 +12,7 @@ import { ResponseService } from 'src/utils/response/response.service';
     EthereumService,
     ConfigService,
     ResponseService,
+    EthereumIndexer,
     {
       provide: 'EthWeb3',
       useFactory: (config: ConfigService) => {
